@@ -1,0 +1,36 @@
+# Goodix Fingerprint
+/dev/goodix_fp                                                          u:object_r:fingerprintd_device:s0
+
+# Keylayout
+/(vendor|system/vendor)/usr/keylayout(/.*)?                             u:object_r:keylayout_file:s0
+
+# Sensors
+/sys/devices/virtual/input/input[0-9]+/stk3x1x-proximity(/.*)?          u:object_r:sysfs_sensors:s0
+/sys/devices/virtual/input/input[0-9]+/stk3x1x-light(/.*)?              u:object_r:sysfs_sensors:s0
+
+# NFC
+/(vendor|system/vendor)/bin/hw/vendor\.nxp\.nxpnfc@1\.0-service         u:object_r:nxpnfc_hal_svc_exec:s0
+
+# cdfinger Fingerprint
+/dev/fpsdev0                                                            u:object_r:cdfinger_device:s0
+/data/system/cdfinger(/.*)?                                             u:object_r:cdfinger_data_file:s0
+
+#/data/misc/dhcp(/.*)?           u:object_r:dhcp_data_file:s0
+#/data/misc/dhcp-6.8.2(/.*)?     u:object_r:dhcp_data_file:s0
+#/data/dpm(/.*)?                                 u:object_r:dpmd_data_file:s0
+
+# Zenmotions
+/sys/kernel/touchpanel/dclicknode         u:object_r:sysfs_gesture:s0
+/sys/devices/platform/kcal_ctrl.0(/.*)?   u:object_r:sysfs_kcal:s0
+
+
+/sys/devices/soc/4080000.qcom,mss/subsys3/name u:object_r:sysfs_ssr:s0
+/data/gf_data(/.*)?                                 u:object_r:fingerprintd_data_file:s0
+#/data/connectivity/bqe_hist.db              u:object_r:cnd_data_file:s0
+
+/sys/module/usb_f_qcrndis/parameters(/.*)?         u:object_r:sysfs_usb_rndis:s0
+/(vendor|system/vendor)/bin/init\.qcom\.crashdata\.sh		u:object_r:qti_init_shell_exec:s0
+/sys/class/timed_output/vibrator(/.*)?   u:object_r:sysfs_vibrator:s0
+
+# Data vendor files
+/data/vendor/misc/audio(/.*)?         u:object_r:vendor_audio_data_file:s0
