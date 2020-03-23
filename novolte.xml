@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remote names -->
+  <remote name="hahasofun" fetch="https://github.com/Bootleggers-Brokenlab" />
+  
+  <!-- Delet those -->
+  <remove-project name="bionic" />
+  <remove-project name="bootable_recovery" />
+  <remove-project name="build" />
+  <remove-project name="build_soong" />
+  <remove-project name="frameworks_av" />
+  <remove-project name="frameworks_base" />
+  <remove-project name="frameworks_native" />
+  <remove-project name="device_bootleg_sepolicy" />
+  <remove-project name="device_qcom_sepolicy" />
+  <remove-project name="hardware_bootleg_interfaces" />
+  <remove-project name="hardware_interfaces" />
+  <remove-project name="packages_apps_BootlegDumpster" />
+  <remove-project name="platform/packages/apps/Dialer" />
+  <remove-project name="packages_apps_Launcher3" />
+  <remove-project name="packages_apps_Settings" />
+  <remove-project name="packages_apps_SettingsIntelligence" />
+  <remove-project name="packages_apps_ThemePicker" />
+  <remove-project name="packages_apps_WallpaperPicker2" />
+  <remove-project name="packages_overlays_Shishufied" />
+  <remove-project name="packages_services_Telecomm" />
+  <remove-project name="packages_services_Telephony" />
+  <remove-project name="system_core" />
+  <remove-project name="system_bt" />
+  <remove-project name="system_netd" />
+  <remove-project name="platform/system/sepolicy" />
+  <remove-project name="system_vold" />
+  <remove-project name="vendor_bootleggers" />
+
+  <!-- To track those -->
+  <project path="bionic" name="bionic" remote="hahasofun" revision="queso"/>
+  <project path="bootable/recovery" name="bootable_recovery" remote="hahasofun" revision="queso"/>
+  <project path="build/make" name="build" groups="pdk" remote="hahasofun" revision="queso">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="hahasofun" revision="queso"/>
+  <project path="frameworks/av" name="frameworks_av" remote="hahasofun" revision="queso"/>
+  <project path="frameworks/base" name="frameworks_base" remote="hahasofun" revision="queso"/>
+  <project path="frameworks/native" name="frameworks_native" remote="hahasofun" revision="queso"/>
+  <project path="device/bootleg/sepolicy" name="device_bootleg_sepolicy" remote="hahasofun" revision="queso"/>
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="hahasofun" revision="queso"/>
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" remote="hahasofun" revision="queso-legacy-um"/>
+  <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy" remote="hahasofun" revision="queso-legacy"/>
+  <project path="hardware/bootleg/interfaces" name="hardware_bootleg_interfaces" remote="hahasofun" revision="queso"/>
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="hahasofun" revision="queso"/>
+  <project path="packages/apps/BootlegDumpster" name="packages_apps_BootlegDumpster" remote="hahasofun" revision="queso"/>
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="hahasofun" revision="queso"/>
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="hahasofun" revision="queso"/>
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="hahasofun" revision="queso"/>
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="hahasofun" revision="queso"/>
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="hahasofun" revision="queso"/>
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="hahasofun" revision="queso"/>
+  <project path="packages/overlays/Shishufied" name="packages_overlays_Shishufied" remote="hahasofun" revision="queso"/>
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="hahasofun" revision="queso"/>
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="hahasofun" revision="queso"/>
+  <project path="system/core" name="system_core" remote="hahasofun" revision="queso"/>
+  <project path="system/bt" name="system_bt" remote="hahasofun" revision="queso"/>
+  <project path="system/netd" name="system_netd" remote="hahasofun" revision="queso"/>
+  <project path="system/sepolicy" name="system_sepolicy" remote="hahasofun" revision="queso"/>
+  <project path="system/vold" name="system_vold" remote="hahasofun" revision="queso"/>
+  <project path="vendor/bootleggers" name="vendor_bootleggers" remote="hahasofun" revision="queso"/>
+
+</manifest>
